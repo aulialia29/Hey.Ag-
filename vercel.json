@@ -1,7 +1,36 @@
 {
+  "version": 2,
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.1"
+    "api/*.php": { "runtime": "vercel-php@0.5.2" }
+  },
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/conn",
+      "dest": "/api/conn.php"
+    },
+    {
+      "src": "/order",
+      "dest": "/api/order.php"
+    },
+    {
+      "src": "/style",
+      "dest": "/api/style.php"
+    },
+    {
+      "src": "/orderhandler",
+      "dest": "/api/order-handler.php"
+    },
+    {
+      "src": "/tampilan",
+      "dest": "/api/tampilan_barang.php"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/$1"
     }
-  }
+  ]
 }
